@@ -1,0 +1,42 @@
+BUILD NOVA APK USING ONLY YOUR ANDROID PHONE
+=============================================
+
+You do NOT need Termux, Android Studio, or a computer. GitHub Actions builds
+the APK in GitHub's cloud. This project ZIP includes the build workflow.
+
+A. Create a GitHub repository
+1. Open https://github.com in Chrome and sign in.
+2. Tap +, then New repository.
+3. Repository name: nova-search-android
+4. Choose Private, then Create repository.
+
+B. Upload this project's files
+1. Extract this ZIP on your phone using your file manager.
+2. Open the new GitHub repository in Chrome.
+3. Use Add file > Upload files.
+4. Upload the CONTENTS of the NOVA_Android_Studio_Project folder,
+   including the hidden .github folder and its workflows/android-apk.yml file.
+   If your file manager hides dot-folders, enable "show hidden files".
+5. Commit the upload to the main branch.
+
+C. Start the cloud build
+1. Open the repository's Actions tab.
+2. Select "Build NOVA Android APK" in the workflow list.
+3. Tap "Run workflow" > "Run workflow".
+4. Wait for the run to finish with a green check mark.
+
+D. Download and install
+1. Open the completed workflow run.
+2. Scroll to Artifacts.
+3. Tap NOVA-Search-debug-APK to download the ZIP artifact.
+4. Extract it; inside is app-debug.apk.
+5. Tap the APK to install. Android may ask you to allow Chrome or Files
+   to install unknown apps. Only allow this for the APK you built yourself.
+
+NOTES
+- GitHub Actions usage is subject to GitHub account limits and policies.
+- Keep the repository private because it contains your app source.
+- This is a debug APK, not a Play Store release.
+- The app is an early prototype. Its local index starts empty and its crawler
+  has limited scope; it is not a full internet-wide search engine.
+- Do not share your GitHub password, recovery codes, or personal access tokens.
